@@ -1,0 +1,230 @@
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+color:white;
+font-family:Arial, sans-serif;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+/* ========================= */
+/* CONTENEDOR GENERAL */
+/* ========================= */
+
+.container{
+width:min(90%,1200px);
+margin:auto;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#111;
+position:none;
+top:0;
+z-index:1000;
+}
+
+.logo_tamanaco{
+width: 50px;;
+height: 50px;;
+}
+
+.nav-links{
+display:flex;
+gap:2rem;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.nav-links a:hover
+
+
+
+
+/* ========================= */
+/* MENÚ HAMBURGUESA */
+/* ========================= */
+
+#menu-toggle{
+display:none;
+}
+
+.menu-icon{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.menu-icon span{
+width:28px;
+height:3px;
+background:white;
+border-radius:5px;
+}
+
+@media(max-width:768px){
+
+
+.menu-icon{
+    display:flex;
+}
+
+.nav-links{
+    display:none;
+    position:absolute;
+    top:80px;
+    right:20px;
+    background:#222;
+    flex-direction:column;
+    padding:15px;
+    border-radius:10px;
+}
+
+#menu-toggle:checked ~ .nav-links{
+    display:flex;
+}
+
+}
+
+
+body{
+    background: linear-gradient(135deg, #000000, #2b0000, #2b0000, #000000);
+}
+
+
+.accordion{
+    background:#ff3c00;
+    color:#fff;
+    padding:15px;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+    margin-top:20px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.panel{
+    display:none;
+    margin-top:15px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.galeria .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:10px;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:10px;
+}
+
+.reserva{
+    text-align:center;
+    margin-top:50px;
+    color: rgb(255, 191, 0);
+}
+
+.reserva input{
+    padding:10px;
+    font-size:16px;
+}
+
+#reservarBtn{
+    position: relative;
+    padding: 15px 25px;
+    background: #111;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#reservarBtn::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+
+    background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+
+    transform: translateX(-100%);
+    animation: luz 2s linear infinite;
+
+    /* clave: recorta el centro para que SOLO quede borde */
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes luz{
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+#fecha{
+    padding: 12px 15px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#fecha:focus{
+    border-color: #00f5ff;
+    box-shadow: 0 0 0 3px rgba(0,245,255,0.15),
+                0 0 15px rgba(0,245,255,0.25);
+    transform: scale(1.02);
+}
+
+#fecha:hover{
+    border-color: #ffae00;
+}
+
+.galeria {
+     color: rgb(255, 242, 0);
+}
+
+footer{
+    background: #ffffff;
+    color: #000000;
+    padding: 50px;
+    text-align: center;
+}

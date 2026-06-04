@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../Downloads/tamanaco"
+		},
+		{
+			"path": "../Flowmar"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Flowmar",
+		"liveServer.settings.port": 5501
+	}
+}
